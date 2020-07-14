@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style>
+body {background-color: powderblue;
+        text-align: center;
+        background-image: url("heart.jpg");}
+h1   {color: blue;}
+h2   {background-color: fuchsia;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 16px 16px;
+    width: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    }        
+input[type=text]{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: coral;
+  border: 5px solid yellow;
+  border-radius: 4px;
+  background-color: #3CBC8D;    
+}
+ 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: deeppink;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+h3{
+    background-color:tomato;
+  border: none;
+  color: white;
+  padding: 16px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+            
+        }        
+</style>
+</head>
+    
+    
+    
+    
+    
+    
+<body>
+	<form action="\predict" method="POST">
+	<h1>Heart Disease Prediction</h1>
+	<h2>Age</h2><br>
+	<input type="text" name="age"><br>
+    <h2>Sex</h2><br>
+	<input type="text" name="sex" placeholder="Enter 1 if male else 0 if female"><br>
+	<h2>Chest Pain Type</h2><br>
+	<input type="text" name="cp" placeholder="Enter a value Between 0 to 4"><br>
+	<h2>Resting Blood Pressure</h2><br>
+	<input type="text" name="tresbps" placeholder="Enter a value Between 80 to 210"><br>
+	<h2>Serum Cholestoral </h2><br>
+	<input type="text" name="chol" placeholder="Enter a value Between 100 to 700"><br>
+	<h2>Fasting Blood Suger </h2><br>
+	<input type="text" name="fbs" placeholder="If >120 enter 1 else 0"><br>
+    <h2>Resting Electrocardiographic Results </h2><br>
+	<input type="text" name="rer" placeholder="0 if normal  1 if having ST-T wave abnormality else 2 showing probable "><br>
+	<h2>Maximum Heart Rate Achieved</h2><br>
+	<input type="text" name="thalach" placeholder=""><br>
+	<h2>Exercise Induced Angina </h2><br>
+	<input type="text" name="exang" placeholder="1 if yes else 0"><br>
+	<h2>Depression induced by exercise relative to rest</h2><br>
+	<input type="text" name="oldpeak" placeholder=""><br>
+    <h2>Slope of the peak exercise ST segment</h2><br>
+	<input type="text" name="slope" placeholder="0 upsloping 1 flat 2 downsloping"><br>
+	<h2>Number of major vessels</h2><br>
+	<input type="text" name="ca" placeholder="0 upsloping 1 flat 2 downsloping"><br>
+	<h2>Thal</h2><br>
+	<input type="text" name="thal" placeholder=""><br>
+	<input type="submit" value="Submit"><br>
+	<h3>{{ prediction_text }}</h3><br>
+    <p>Made by Ritesh</p>
+</body>
+</html>
